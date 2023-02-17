@@ -8,9 +8,5 @@ function solve(s){
     return [upperCaseCount, lowerCaseCount, numbersCount, specialCharsCount];
   }
 
-  function trim(str, size) {
-    const x = str.split('').slice(0, -size).join('');
-    //const y = x.slice(0, -size);
-    //const z = y.join('')
-    return x + "...";
-  }
+//Cut the string to a required number with different specifications 
+const trim = (str, size) => str.length <= size ? str : str.slice(0, size - (size <= 3 ? 0 : 3)) + '...';
